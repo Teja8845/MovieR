@@ -1,26 +1,20 @@
 {
-  "name": "movie-rating-web",
+  "name": "movier",
   "version": "1.0.0",
   "description": "Movie Rating and Review Web App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon run server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Abhishek-BG/Movie-Rating-Web.git"
+    "server": "nodemon run server.js",
+    "start": "node server.js"
   },
   "keywords": [
     "Web",
     "App"
   ],
-  "author": "Abhishek",
+  "author": "Teja",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Abhishek-BG/Movie-Rating-Web/issues"
-  },
-  "homepage": "https://github.com/Abhishek-BG/Movie-Rating-Web#readme",
+  "homepage": "https://github.com/Teja8845/MovieR.git",
   "dependencies": {
     "-": "^0.0.1",
     "axios": "^0.27.2",
@@ -32,5 +26,13 @@
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.20",
     "save": "^2.9.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teja8845/MovieR.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Teja8845/MovieR/issues"
   }
 }
