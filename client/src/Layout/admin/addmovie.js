@@ -15,13 +15,14 @@ Axios.defaults.withCredentials = true;
     const [title,settitle] = useState("");
     const [genre,setgenre] = useState("");
     const [url,seturl] = useState("");
+    const [trailer,settrailer] = useState("");
     const [status,setstatus] = useState("Add Movie");
     const nav = useNavigate();
     //method
 
     const addmovie= () => {
 
-        if(year=="" || language=="" || title=="" || url=="" || genre==""){
+        if(year=="" || language=="" || title=="" || url=="" || genre=="" || trailer==""){
             setstatus("Please fill all the feilds");
         }else{
             Axios.post("http://localhost:3001/movie",{
@@ -30,10 +31,14 @@ Axios.defaults.withCredentials = true;
                 language: language,
                 year:year,
                 url:url,
+                trailer:trailer,
                  }).then((response)=>
                  {
                      if (response.data.message === "success") {
                          setstatus("Added Movie");
+                     }
+                     else if(response.data.message=="movie exist"){
+                        setstatus("Movie already exist")
                      }
                      else {
                          setstatus("Something Went Wrong");
@@ -78,6 +83,11 @@ Axios.defaults.withCredentials = true;
                                 name="url"
                                 placeholder="Banner Image Url"
                                 onChange={(e) => seturl(e.target.value)}
+                                required />
+                                <input type="text"
+                                name="trailer"
+                                placeholder="trailer"
+                                onChange={(e) => settrailer(e.target.value)}
                                 required />
                           
                             <br></br>

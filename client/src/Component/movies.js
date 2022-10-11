@@ -154,7 +154,7 @@ if(critic >=3){
                             <img class="test-img"src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" />
                         </div>
                         <div class="col-lg-9">
-                            <span>{item.rating}/10</ span> 
+                            <span>{item.rating}/10</span> 
                             <p>{item.value}</p>
                        </div>
                       </div>   

@@ -59,8 +59,15 @@ export default function Home() {
                             {data && data.length > 0 && data.map((item) =>
                                 <div className="col-lg-3">
                                     <div class="card mymovie-box ">
-                                        <p class="notification">
-                                            <img src={item.url} class="card-img-top img-height " alt="..." />
+                                        <p class="notification" action='/movie'>
+                                            <img src={item.url} onClick={() => review(item.sl,
+                                                        item.name,
+                                                        item.url,
+                                                        item.rating,
+                                                        item.year,
+                                                        item.language,
+                                                        item.genre,
+                                                        item.trailer)} class="card-img-top img-height "alt="..." />
                                             <span class="badge">{item.genre}
                                             </span>
                                         </p>
@@ -73,16 +80,7 @@ export default function Home() {
                                             <span></span>
                                         </div>
                                         <div class="card-body card-wi">
-                                            <h5 class="left">
-                                                <button href="#" id="myBtn-" class="mybtn1"
-                                                    onClick={() => review(item.sl,
-                                                        item.name,
-                                                        item.url,
-                                                        item.rating,
-                                                        item.year,
-                                                        item.language,
-                                                        item.genre,
-                                                        item.trailer)}>Give a Review</button></h5>
+                                           
                                             <h5 class="card-title">Movie Name :{item.name}
                                             </h5>
                                             <h5 class="card-text">Release Year: {item.year}</h5>
