@@ -14,7 +14,7 @@ Axios.defaults.withCredentials = true;
 function Form() {
   const loc=useLocation();
   const link=()=>{
-    window.location.href=loc.state.t;
+    window.location.href=loc.state.trailer;
   }
   var session = sessionStorage.getItem("key");
   if (session=='null') {
